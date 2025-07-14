@@ -12,10 +12,6 @@ const logger = (req,res,next)=>{
     //console.log(req.url)
     const now = new Date();
    const formatted = now.toLocaleString(); 
-     let body='';
-      req.on('data',(chunk)=>{
-         body+=chunk.toString();
-      })
        req.on('end' ,()=>{
          fs.appendFile('./usersData.txt' , `{\n  Request method: ${req.method}\n  URL: ${req.url}\n  Date&Time: ${formatted}\n}\n`);
        }
