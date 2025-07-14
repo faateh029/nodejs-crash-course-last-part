@@ -28,3 +28,13 @@
   URL: /api/users
   Date&Time: 7/14/2025, 5:56:48 PM
 }
+{
+  Request method: GET
+  URL: /api/users
+  Date&Time: 7/14/2025, 6:06:56 PM
+}
+{
+  Request method: POST
+  URL: /api/users
+  Date&Time: 7/14/2025, 6:07:09 PM
+}
