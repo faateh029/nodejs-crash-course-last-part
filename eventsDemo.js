@@ -62,3 +62,35 @@ myEvent.on('error', (err)=>{
 
 myEvent.emit('error' , new Error('something went wrong'));
 
+
+
+const event = new EventEmitter(); 
+console.log('before emiting event');
+
+event.on('test' , ()=>{console.log('test1')})
+
+event.on('test' , ()=>{console.log('test2')})
+
+event.on('test' , ()=>{console.log('test3')})
+event.once('mewo' , ()=>{console.log('mewo')});
+event.emit('mewo');
+
+event.emit('mewo')
+event.emit('test');
+
+console.log('after registering events');
+const danceFunc = ()=>{console.log('dance')}
+event.on('dance' , danceFunc);
+event.emit('test');
+event.off('dance' , danceFunc);
+event.emit('dance');
+console.log('after emitting events');
+
+// console.log(event.eventNames());
+
+// console.log(event.getMaxListeners());
+
+// event.setMaxListeners(12);
+
+//console.log(event.listeners('dance'));
+

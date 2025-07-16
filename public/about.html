@@ -5,5 +5,17 @@
 </head>
 <body>
      <h1>about</h1>
+     <button class="js-click-butt">Click Me!</button>
+     <script>
+         
+          function clickFunc(){ console.log('How dare you to touch me?')}
+   
+      const myEvent = new EventTarget();;
+           myEvent.addEventListener('clickMe', clickFunc);
+     document.querySelector('.js-click-butt').addEventListener('click', ()=>{
+      myEvent.dispatchEvent(new CustomEvent('clickMe'))
+     })  
+
+     </script>
 </body>
 </html>

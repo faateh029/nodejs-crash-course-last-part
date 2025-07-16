@@ -1,4 +1,4 @@
-// import fs from 'fs/promises';
+import fs from 'fs/promises';
 
 
 // // fs.writeFile('./test.txt' , 'content from writeFile() function' , ()=>{  
@@ -33,3 +33,21 @@
 // appendFile();
 // readFile();
 
+
+async function example(){
+            const filePath = './def.txt';
+
+    try{
+        const data =  await fs.readFile(filePath , 'utf-8');
+        console.log(data);
+        const newContent = 'something new';
+        await fs.appendFile(filePath, newContent /*, { flag: 'a+' }this flag places the postion of the stream at the end*/ );
+        console.log('just wrote some content');
+        const data2 = await fs.readFile(filePath , 'utf-8');
+        console.log(data2);
+    }catch(err){
+        throw new Error();
+    }
+}
+
+example();
