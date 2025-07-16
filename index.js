@@ -7,6 +7,6 @@
 
 // console.log(celciusToFahrenhite(24))
 
-import addFunc  , { getposts , subtract} from "./postController.js"
+// import addFunc  , { getposts , subtract} from "./postController.js"
 
-console.log(getposts());
+// console.log(getposts());
